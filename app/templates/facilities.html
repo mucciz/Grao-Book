@@ -1,0 +1,148 @@
+{% extends 'layout.html' %}
+
+<!-- Content block -->
+{% block content %}
+<div class="view views"
+  style="background-image: url('https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <!-- Mask & flexbox options-->
+  <div class="mask rgba-black-light align-items-center">
+    <!-- Content -->
+    <div class="container">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-md-12 mb-4 white-text text-center kimonyoski">
+          <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+            data-wow-delay="0.3s"><strong>Featured Facilities</strong></h1>
+          <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+          <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Sample &
+              choose</strong></h5>
+         
+          <a href="#choose"><button type="button" class="btn btn-outline-white waves-effect">view<i class="fas fa-caret-down pl-2" aria-hidden="true"></i></button></a>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Content -->
+  </div>
+  <!-- Mask & flexbox options-->
+</div>
+<!-- Full Page Intro -->
+<!-- Main navigation -->
+<!--Main Layout-->
+  <!-- the main container -->
+  <div class="container mt-5 smooth-scroll " id="choose">
+    <div class="card-header p-3">
+      <!-- <h1 class="hd-top" id="choose">FACILITIES</h1> -->
+      <div class="row d-flex ft-cards pt-5 mb-3 justify-content-center">
+        <div class="card-deck col-lg-4 ">
+          <div class="card ">
+            <div class="view ">
+              <a href="../static/images/img-1.jpg" data-lightbox="pitches" data-title="Stamford Bridge"><img
+                  class="card-img-top" src="../static/images/img-1-sm.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Stamford Bridge</h4>
+              <p class="card-text"><strong>Rating :</strong><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span></p>
+              <p><strong>Reviews :</strong> 47</p>
+              <p><i class="fas fa-money-bill-wave"> | </i> Kes. 2500/session</p>
+              <a href="{{ url_for(main.book) }}" class="btn btn-dark-green" id="bkn-1">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck  col-lg-4 justify-content-lg-around">
+          <div class="card ">
+            <div class="view ">
+              <a href="../static/images/img-2.jpg" data-lightbox="pitches" data-title="Anfield"><img
+                  class="card-img-top " src="../static/images/img-2-sm.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Anfield</h4>
+              <p class="card-text"><strong>Rating :</strong><span class="fa fa-star"></span><span
+                  class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+              </p>
+              <p><strong>Reviews :</strong>23</p>
+              <p><i class="fas fa-money-bill-wave"> | </i> Kes. 2500/session</p>
+              <a href="{{ url_for(main.book) }}" class="btn btn-dark-green" id="bkn-1">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck col-lg-4">
+          <div class="card  ">
+            <div class="view ">
+              <a href="../static/images/img-3.jpg" data-lightbox="pitches" data-title="Old Trafford"><img
+                  class="card-img-top " src="../static/images/img-3-sm.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Old Trafford</h4>
+              <p class="card-text"><strong>Rating :</strong><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star"></span>
+              </p>
+              <p><strong>Reviews :</strong> 35</p>
+              <p><i class="fas fa-money-bill-wave"> | </i> Kes. 2500/session</p>
+              <a href="{{ url_for(main.book) }}" class="btn btn-dark-green" id="bkn-1">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex pb-5 mb-3 justify-content-center">
+        <div class="card-deck col-lg-4">
+          <div class="card  ">
+            <div class="view ">
+              <a href="../static/images/img-4.jpg" data-lightbox="pitches" data-title="Camp Toyoyo"><img
+                  class="card-img-top " src="../static/images/img-4-sm.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Camp Toyoyo</h4>
+              <p class="card-text"><strong>Rating :</strong><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span>
+              </p>
+              <p><strong>Reviews :</strong> 39</p>
+              <p><i class="fas fa-money-bill-wave"> | </i> Kes. 2500/session</p>
+              <a href="{{ url_for(main.book) }}" class="btn btn-dark-green" id="bkn-1">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck  col-lg-4">
+          <div class="card this-card">
+            <div class="view ">
+              <a href="../static/images/img-5.jpg" data-lightbox="pitches" data-title="Nyayo Stadium"><img
+                  class="card-img-top " src="../static/images/img-5-sm.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Nyayo Stadium</h4>
+              <p class="card-text"><strong>Rating :</strong><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span></p>
+              <p><strong>Reviews :</strong> 65</p>
+              <p><i class="fas fa-money-bill-wave"> | </i> Kes. 2500/session</p>
+              <a href="{{ url_for(main.book) }}" class="btn btn-dark-green" id="bkn-1">Book Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck col-lg-4 ">
+          <div class="card  ">
+            <div class="view ">
+              <a href="../static/images/img-6.jpg" data-lightbox="pitches" data-title="Safaricom Stadium"><img
+                  class="card-img-top " src="../static/images/img-6-sm.jpg" alt="Card image cap"></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Safaricom stadium</h4>
+              <p class="card-text"><strong>Rating :</strong><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span
+                  class="fa fa-star checked"></span><span class="fa fa-star checked"></span></p>
+              <p><strong>Reviews :</strong> 51</p>
+              <p><i class="fas fa-money-bill-wave"> | </i> Kes. 2500/session</p>
+              <a href="{{ url_for(main.book) }}" class="btn btn-dark-green" id="bkn-1">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

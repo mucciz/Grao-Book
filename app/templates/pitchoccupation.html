@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="view veews"
+    style="background-image: url('https://cdn.pixabay.com/photo/2017/02/18/11/00/checklist-2077020_960_720.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light align-items-center">
+        <!-- Content -->
+        <div class="container">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-md-12 mb-4 white-text text-center kimonyoski1">
+                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+                        data-wow-delay="0.3s"><strong>Pitch Status</strong></h1>
+                    <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+
+
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+</div>
+
+<main>
+    <div class="container">
+        <div class="row d-flex justify-content-center  text-center py-5">
+            <legend>Pitch Occupation</legend>
+            <form action="" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.date.label(class='form-control-label text-dark')}}
+                {{ form.date(class="dtpick form-control form-control-lg") }}
+                {% for error in form.date.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+
+                <div class="form-group z-depth-0">
+                    {{ form.submit(class='btn btn-outline-success') }}
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

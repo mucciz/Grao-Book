@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="view veews"
+    style="background-image: url('https://cdn.pixabay.com/photo/2017/02/18/11/00/checklist-2077020_960_720.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light align-items-center">
+        <!-- Content -->
+        <div class="container">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-md-12 mb-4 white-text text-center kimonyoski1">
+                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+                        data-wow-delay="0.3s"><strong>Book Now</strong></h1>
+                    <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+
+
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+</div>
+<!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+<!--Main Layout-->
+<main>
+    <div class="container card bg-transparent mt-5">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center py-5">
+            <legend class="text-center">Pitch details</legend>
+
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Pitch</th>
+                        <th>Price(Kshs./hour)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pitch in allpitches %}
+                    <tr>
+                        <td>{{ pitch.pitchName }}</td>
+                        <td>{{ pitch.cost}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="row d-flex justify-content-center py-5">
+            <legend class="text-center">Pitch Occupation on {{date}}</legend>
+            <hr>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>SOCCER PITCH</th>
+                        {% for hour in hours %}
+                        <th>{{hour}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pitchoccu in pitchoccus %}
+                    <tr>
+                        <td>{{ pitchoccu.pitchName }}</td>
+                        {% for hour in pitchoccu.pitchhours %}
+                        {% if hour %}
+                        <td bgcolor="#FF0000"> X </td>
+                        {% else %}
+                        <td bgcolor="#00FF00"> O </td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+</main>
+{% endblock %}

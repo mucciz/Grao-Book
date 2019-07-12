@@ -1,0 +1,105 @@
+/*Styles for the home page*/
+html,
+body,
+header,
+.views
+ {
+  height: 100%;
+  background-color: #eeeeee;
+  scroll-behavior: smooth;
+}
+
+.veews{
+  height: 50%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #00C851 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #78909c !important;
+  }
+}
+
+h1 {
+  letter-spacing: 8px;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+.hr-light {
+  border-top: 3px solid #fff;
+  width: 80px;
+}
+
+.kimonyoski {
+    margin-top: 200px !important;
+}
+
+.kimonyoski1 {
+  margin-top: 120px !important;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+.card:hover {
+  -webkit-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+}
+
+
+body {
+  background-color: #EEEEEE;
+}
+
+#stripped li{
+  text-decoration: none !important;
+}
+
+.fa-money-bill-wave {
+  font-size: 18px;
+  color: green;
+}
+
+.fa-twitter:hover {
+  color: #1dcaff;
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-instagram:hover {
+  color: #e1306c;
+}
+.congrats {
+  width: 30%;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width:450px) {
+  .the-color {
+    width: 100%;
+  }
+  }

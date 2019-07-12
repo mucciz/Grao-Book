@@ -1,0 +1,275 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Booking System</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="icon"
+        href="https://library.kissclipart.com/20180904/wbq/kissclipart-soccer-player-png-clipart-football-player-united-s-1543d1188616c7e4.png"
+        rel="type/icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/lightbox.min.css">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+    <title>Document</title>
+</head>
+
+<body class="smooth-scroll">
+    <!-- 
+    {% if current_user.is_anonymous %}
+    <a href="{{ url_for('auth.login') }}">Login</a>
+    {% else %}
+    <a href="{{ url_for('auth.logout')}}">Logout</a>
+    {% endif %}
+
+    {% if current_user.is_authenticated %}
+    <div align="right">Logged in as: {{current_user.fullname}}</div>
+    {% endif %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+     -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container animated fadeInDown slow">
+            <a class="navbar-brand" style="font-family: 'Shadows Into Light', cursive; font-size: 1.4em;"
+                href="#"><strong>Book Grao <i
+                        class="fas fa-futbol fa-xs animated bounce infinite slow"></i></strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+                aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('main.index') }}">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.book')}}">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.facilities')}}">Facilities</a>
+                    </li>
+                    <!-- <a href="{{ url_for('main.index') }}">Home</a>
+                    <a href="{{ url_for('main.bookingbooker')}}">Booked Pitches</a>
+                    <a href="{{ url_for('main.book')}}">Book Pitch</a>
+                    <a href="{{ url_for('main.pitchoccupation')}}">Pitch Status</a>
+                    <a href="{{ url_for('main.pitchavailable')}}">Pitch Availability</a>
+                    <a href="{{ url_for('main.cancelbooking')}}">Cancel Booking</a>
+                    <a href="{{ url_for('main.facilities')}}">Facilities</a> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="{{ url_for('main.bookingbooker')}}">Booked Pitches</a>
+                            <a class="dropdown-item" href="{{ url_for('main.pitchoccupation')}}">Pitch Status</a>
+                            <a class="dropdown-item" href="{{ url_for('main.pitchavailable')}}">Pitch Availability</a>
+                            <a class="dropdown-item" href="{{ url_for('main.cancelbooking')}}">Cancel Booking</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    {% if current_user.is_anonymous %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+                    </li>
+                    {% else %}
+                    <a href="{{ url_for('auth.logout')}}">Logout</a>
+                    {% endif %}
+
+                    <li class="nav-item avatar">
+                        <a class="nav-link p-0" href="#">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                                class="rounded-circle z-depth-0" alt="avatar image" height="35">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <footer class="page-footer font-small blue-grey lighten-5 mt-4">
+
+        <div class="bg-success">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3 dark-grey-text">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">BOOK GRAO</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Fairness and accountability is what we're on about. Have a doubt-free experience with our
+                        online booking system.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Latest Articles</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a class="dark-grey-text" href="#!">Rise of artificial arenas allows the busy to keep
+                            fit</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">The cancer of Kenyan football and its prevalence</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Nairobi's City Stadium to get new artificial turf </a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Navigate</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+                    <p>
+                        <a class="dark-grey-text" href="#!">Home</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Account</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Facilities</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!"></a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">Help</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Nairobi, 00600, KE</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@bookgrao.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 254 111 111 </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 254 706 449</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50 py-3">© 2019 Copyright:
+            <a class="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> BookGrao.co.ke</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js">
+    </script>
+    <script src="../static/js/lightbox-plus-jquery.min.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(".dtpick").datepicker();
+        });
+    </script>
+</body>
+
+</html>

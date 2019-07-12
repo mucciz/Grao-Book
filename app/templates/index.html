@@ -1,0 +1,488 @@
+{% extends 'layout.html' %}
+
+<!-- Content block -->
+{% block content %}
+
+<title> {{ title }} </title>
+
+<!--Navbar-->
+
+<!-- Navbar -->
+<!-- Full Page Intro -->
+<div class="view views mb-5"
+    style="background-image: url('https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-strong align-items-center ">
+        <!-- Content -->
+        <div class="container">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-md-12 mb-4 white-text text-center kimonyoski">
+                    <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown animated bounce slow"
+                        data-wow-delay="0.3s" style="font-family: 'Shadows Into Light', cursive; font-size: 8em">
+                        <strong>Book Grao</strong></h1>
+                    <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+                    <div class="container" style="width:80%; font-size: 1.35em">
+                        <p style="letter-spacing: 0.25em" class="text-uppercase mb-4 white-text wow fadeInDown"
+                            data-wow-delay="0.4s">
+                            <strong>Fairness and accountability is what we're on about. Have a doubt-free experience
+                                with our online booking system.
+
+                            </strong></p>
+                    </div>
+                    <a class="btn btn-outline-success btn-lg wow fadeInDown animated heartBeat infinite slow" href="{{ url_for('main.book')}}"
+                        data-wow-delay="0.4s">Book</a>
+                    <!-- <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a> -->
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+</div>
+<!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+
+
+<!--Main Layout-->
+<main>
+    <div class="container mt-5">
+        <!-- Container -->
+        <div class="row">
+
+            <!-- Column -->
+            <div class="col-md-4 mb-4 d-flex align-items-stretch ">
+
+
+                <div class="card text-white bg-primary pt-3"
+                    style="background-image: url('https://www.coachchris.com.au/wp-content/uploads/2017/09/grey-background.png'); background-size: cover">
+                    <!-- <div class="card-header">Header</div> -->
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row no-gutters">
+                                <div class="col-lg-2">
+                                    <i class="fas fa-search-location fa-2x white-text pt-1 ml-n1"></i>
+                                </div>
+                                <div class="col-lg-10 ml-n3">
+                                    <h5 class="card-title" style="font-size: 2rem; letter-spacing: 0rem;">Search Pitch
+                                    </h5>
+                                    <p class="card-text text-white">Search for the best grounds by region, whether it's
+                                        around your locale or any other region you fancy playing in, the fun must go on!
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- Column -->
+
+            <!-- Column -->
+            <div class="col-md-4 mb-4 d-flex align-items-stretch ">
+                <!--Card-->
+                <div class="card text-white bg-primary pt-3"
+                    style="background-image: url('https://www.coachchris.com.au/wp-content/uploads/2017/09/grey-background.png'); background-size: cover">
+                    <!-- <div class="card-header">Header</div> -->
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row no-gutters">
+                                <div class="col-lg-2">
+                                    <i class="fas fa-calendar-check fa-2x white-text pt-1 ml-n1"></i>
+                                </div>
+                                <div class="col-lg-10 ml-n3">
+                                    <h5 class="card-title" style="font-size: 2rem; letter-spacing: 0rem;">Pick A Date &
+                                        Time</h5>
+                                    <p class="card-text text-white">Pitch, check. Now you can move on to select a date.
+                                        myDiv Hone in on those wasted weeknights! Who said scheduled fun isn't fun?
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--/.Card-->
+
+            </div>
+            <!-- Column -->
+
+            <!-- Column -->
+            <div class="col-md-4 mb-4 d-flex align-items-stretch">
+
+                <!--Card-->
+                <div class="card text-white bg-primary pt-3"
+                    style="max-width: 30rem; background-image: url('https://www.coachchris.com.au/wp-content/uploads/2017/09/grey-background.png'); background-size: cover">
+                    <!-- <div class="card-header">Header</div> -->
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row no-gutters">
+                                <div class="col-lg-2">
+                                    <i class="fas fa-user-clock fa-2x white-text pt-1 ml-n1"></i>
+                                </div>
+                                <div class="col-lg-10 ml-n3">
+                                    <h5 class="card-title" style="font-size: 2rem; letter-spacing: 0rem;">Tailor Your
+                                        Time</h5>
+                                    <p class="card-text text-white">Tailor your play time, choose what time best works
+                                        for you. Morning, afternoon or night time, feel free to plan according to your
+                                        needs
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--/.Card-->
+
+            </div>
+            <!-- Column -->
+
+        </div>
+        <!-- Container -->
+    </div>
+    <!--Carousel Wrapper-->
+    <div class="container mt-5">
+
+        <div class="row d-flex justify-content-center">
+            <div class="card-header col-lg-7  border-top border-success">
+                <h1>IN THE HEADLINES</h1>
+                <div id="multi-item-example" class="carousel slide carousel-multi-item ml-0" data-ride="carousel">
+
+                    <!--Controls-->
+                    <div class="controls-top clearfix pb-3 mb-2">
+                        <a class="btn-floating float-left ml-3" href="#multi-item-example" data-slide="prev"><i
+                                class="fas fa-chevron-left fa-2x green-text"></i></a>
+                        <a class="btn-floating float-right mr-3 " href="#multi-item-example" data-slide="next"><i
+                                class="fas fa-chevron-right fa-2x green-text"></i></a>
+                    </div>
+                    <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                        <div class="carousel-item active">
+
+                            <!-- News jumbotron -->
+                            <div class="jumbotron text-center hoverable p-4 ">
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+                                        <!-- Featured image -->
+                                        <div class="view overlay">
+                                            <img src="https://i.pinimg.com/564x/7b/ed/64/7bed64c0b0f4db38b50a86b4b81f719f.jpg"
+                                                class="img-fluid" alt="Sample image for first version of blog listing">
+                                            <a>
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                                        <!-- Excerpt -->
+                                        <a href="#!" class="green-text">
+                                            <h6 class="h6 pb-1"><i class="fas fa-futbol pr-1"></i> Football</h6>
+                                        </a>
+
+                                        <h4 class="h4 mb-4">Nairobi's City Stadium to get new artificial turf next month
+                                        </h4>
+
+                                        <p class="font-weight-normal">Stadium to get artificial turf by latest next
+                                            month courtesy of City Hall. ... City Stadium after installation of the
+                                            current astro turf in 2008</p>
+                                        <p class="font-weight-normal">by <a><strong>The Star</strong></a>, May 21, 2019
+                                        </p>
+
+                                        <a class="btn btn-success"
+                                            href="https://www.the-star.co.ke/sports/football/2019-05-21-nairobis-city-stadium-to-get-new-artificial-turf-next-month/">Read
+                                            more</a>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </div>
+                            <!-- News jumbotron -->
+
+
+                        </div>
+                        <!--/.First slide-->
+                        <div class="carousel-item">
+                            <!-- News jumbotron -->
+                            <div class="jumbotron text-center hoverable p-4">
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+                                        <!-- Featured image -->
+                                        <div class="view overlay">
+                                            <img src="https://i.pinimg.com/564x/e5/cc/55/e5cc550c5bf089c6f7e6ed17126149c1.jpg"
+                                                class="img-fluid" alt="Sample image for first version of blog listing">
+                                            <a>
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                                        <!-- Excerpt -->
+                                        <a href="#!" class="green-text">
+                                            <h6 class="h6 pb-1"><i class="fas fa-futbol pr-1"></i> Football</h6>
+                                        </a>
+
+                                        <h4 class="h4 mb-4">The cancer of Kenyan football and its prevalence on the
+                                            beautiful game.</h4>
+
+                                        <p class="font-weight-normal">Football Kenya Federation has seen a fair share of
+                                            damaging drama, ... The national team is training in preparation of AFCON
+                                            2019 and CHAN .... The country has to build generation turf, which is
+                                            similar to the natural grass.
+                                        </p>
+                                        <p class="font-weight-normal">by <a><strong>Citizen</strong></a>, May 4, 2019
+                                        </p>
+
+                                        <a class="btn btn-success"
+                                            href="https://citizentv.co.ke/sports/the-cancer-of-kenyan-football-and-its-prevalence-on-the-beautiful-game-244022/">Read
+                                            more</a>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </div>
+                            <!-- News jumbotron -->
+
+
+                        </div>
+
+                        <!--/.Second slide-->
+                        <div class="carousel-item">
+                            <!-- News jumbotron -->
+                            <div class="jumbotron text-center hoverable p-4">
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+                                        <!-- Featured image -->
+                                        <div class="view overlay">
+                                            <img src="https://i.pinimg.com/564x/6c/a9/88/6ca9880adfa5a2025844c5381d343210.jpg"
+                                                class="img-fluid" alt="Sample image for first version of blog listing">
+                                            <a>
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                                        <!-- Excerpt -->
+                                        <a href="#!" class="green-text">
+                                            <h6 class="h6 pb-1"><i class="fas fa-futbol pr-1"></i> Football</h6>
+                                        </a>
+
+                                        <h4 class="h4 mb-4">Kahata distributed kit to Ruiru teams before derby</h4>
+
+                                        <p class="font-weight-normal">On Thursday, before starring in Gor Mahia’s 3-1
+                                            thrashing of AFC Leopards, Kahata distributed uniforms from Kits for Africa
+                                            to 30 teams from Ruiru, 20 from Thika and 10 from Dandora.
+                                        </p>
+                                        <p class="font-weight-normal">by <a><strong>Standard Sports</strong></a>, May
+                                            21st, 2019
+                                        </p>
+
+                                        <a class="btn btn-success"
+                                            href="https://www.standardmedia.co.ke/sports/article/2001326450/kahata-distributed-kit-to-ruiru-teams-before-derby">Read
+                                            more</a>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </div>
+                            <!-- News jumbotron -->
+
+
+                        </div>
+                        <!--Third slide-->
+                        <div class="carousel-item">
+                            <!-- News jumbotron -->
+                            <div class="jumbotron text-center hoverable p-4">
+
+                                <!-- Grid row -->
+                                <div class="row">
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+                                        <!-- Featured image -->
+                                        <div class="view overlay">
+                                            <img src="https://i.pinimg.com/564x/ad/77/bb/ad77bb9a40dba543e0a102666ce35d82.jpg"
+                                                class="img-fluid" alt="Sample image for first version of blog listing">
+                                            <a>
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                    <!-- Grid column -->
+                                    <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                                        <!-- Excerpt -->
+                                        <a href="#!" class="green-text">
+                                            <h6 class="h6 pb-1"><i class="fas fa-futbol pr-1"></i> Football</h6>
+                                        </a>
+
+                                        <h4 class="h4 mb-4">Rise of artificial arenas allows the busy to keep fit</h4>
+
+                                        <p class="font-weight-normal">Long days at work can be considerably hectic and
+                                            gets one to a point they feel the need to blow off some steam. While
+                                            drinking and partying is some people’s way of relieving work stress, others
+                                            prefer engaging ...
+                                        </p>
+                                        <p class="font-weight-normal">by <a><strong>Kevin Namunwa</strong></a>, February
+                                            26, 2019
+                                        </p>
+
+                                        <a class="btn btn-success"
+                                            href="https://businesstoday.co.ke/rise-artificial-arenas-allows-busy-keep-fit/">Read
+                                            more</a>
+
+                                    </div>
+                                    <!-- Grid column -->
+
+                                </div>
+                                <!-- Grid row -->
+
+                            </div>
+                            <!-- News jumbotron -->
+                        </div>
+                        <!--/.Third slide-->
+                    </div>
+
+                </div>
+
+                <!--/.Slides-->
+            </div>
+            <!--/.Carousel Wrapper-->
+            <!-- Card Dark -->
+            <div class="col-lg-4 ">
+                <div class="card-header border-top border-success pb-5">
+                    <h1 class="pb-3">
+                        FEATURED
+                    </h1>
+                    <div class="card hoverable">
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top"
+                                src="https://i.pinimg.com/564x/6f/b3/0e/6fb30eef71056d50ccd58afd6155bebc.jpg"
+                                alt="Card image cap">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <!-- <div class="avatar mx-auto grey">
+                                <img src="https://images2.minutemediacdn.com/image/upload/c_fill,w_912,h_516,f_auto,q_auto,g_auto/shape/cover/sport/tottenham-hotspur-v-fc-barcelona-uefa-champions-league-group-b-5bc5fe1481fe5b525c000003.jpg" class="rounded-circle" alt="woman avatar" height="210">
+                              </div> -->
+
+                        <!-- Card content -->
+                        <div class="card-body elegant-color white-text rounded-bottom">
+
+                            <!-- Social shares button -->
+                            <!-- <a class="activator waves-effect mr-4"><i class="fas fa-share-alt white-text"></i></a> -->
+                            <!-- Title -->
+                            <h4 class="card-title text-center">Kenyan boy awarded by Ozil</h4>
+                            <hr class="hr-light">
+                            <!-- Text -->
+                            <p class="card-text white-text mb-4">Kenyan boy, after his photo where he wore a self-written “Ozil 10” jersey went viral, has landed a job.</p>
+                            <!-- Link -->
+                            <a href="https://www.standardmedia.co.ke/sports/article/2001327571/kenyan-boy-awarded-by-mesut-ozil-lands-job" class="white-text d-flex justify-content-end">
+                                <h5>Read more <i class="fas fa-angle-double-right"></i></h5>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Card Dark -->
+        </div>
+
+    </div>
+    <div class="container mt-5">
+        <!-- Jumbotron -->
+        <div class="card card-image"
+            style="background-image: url(https://images.pexels.com/photos/978695/pexels-photo-978695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+                <div class="py-5">
+
+                    <!-- Content -->
+                    <h5 class="h5 green-text"><i class="fas fa-futbol"></i> Cheza Ball</h5>
+                    <h2 class="card-title h2 my-4 py-2Jumbotron with image overlay">Chambilecho Wahenga</h2>
+                    <p class="mb-4 pb-2 px-md-5 mx-md-5">Whether you're a professional football team looking to train or
+                        just a bunch of peeps looking to blow off steam after a long day of work, we've got you covered.
+                    </p>
+                    <p>Remember, 7 days without football makes one weak</p>
+                    <a class="btn btn-success animated pulse slower infinite"><i class="fas fa-clone left"></i> Facilities</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Jumbotron -->
+    </div>
+    <!-- Card -->
+    <div class="container-fluid text-center p-5 mt-4">
+        <h1>OUR <span class="green-text">FEATURED</span> PARTNERS</h1>
+        <p>We work with a variety of organisations and groups to promote grass roots sport in Nairobi and Beyond. If you
+            feel your company would benefit from joining us, please drop us an email.</p>
+        <img class="m-3"
+            src="http://content.nike.com/content/dam/one-nike/globalAssets/social_media_images/nike_swoosh_logo_black.png"
+            height="100" width="100">
+        <img class="m-3"
+            src="https://cdn11.bigcommerce.com/s-sq9zkarfah/images/stencil/1280x1280/products/111045/126990/Adidas-Dripping-Blood-Logo-Sticker__63535.1510657223.jpg?c=2?imbypass=on"
+            height="100" width="100">
+        <img class="m-3" src="http://pluspng.com/img-png/puma-logo-png-puma-graphic-shorts-mens-1474363556-png-300.png"
+            height="100" width="100">
+
+
+    </div>
+</main>
+<!--Main Layout-->
+{% endblock %}
